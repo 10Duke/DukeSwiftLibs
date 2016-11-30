@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DukeSwiftLibs_Example' do
+  pod 'DukeSwiftLibs', :path => '../'
+
+  target 'DukeSwiftLibs_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
