@@ -13,7 +13,7 @@ A library set of tools to ease the iOS mobile development of the 10Duke SSO and 
 
 To run the example IdP SSO and REST API using project, clone the repo, and run `pod install` from the Example directory first.
 
-The example application connects the user to a running instance of the IdP service. Please see 
+The example application connects the user to a running instance of the IdP service.
  
 ####Example application features:
 * SSO login
