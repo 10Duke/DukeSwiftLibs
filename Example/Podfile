@@ -1,11 +1,25 @@
+platform :ios, '10.0'
 use_frameworks!
 
 target 'DukeSwiftLibs_Example' do
+
+  # DukeSwiftLibs
   pod 'DukeSwiftLibs', :path => '../'
+
+  # Alamofire
+  pod 'Alamofire', '~> 4.0'
+
+  # EVReflection
+  pod "EVReflection"
+
+  # Locksmith
+  pod 'Locksmith'
+
+  # SwiftyJSON
+  pod 'SwiftyJSON'
 
   target 'DukeSwiftLibs_Tests' do
     inherit! :search_paths
 
-    
   end
 end

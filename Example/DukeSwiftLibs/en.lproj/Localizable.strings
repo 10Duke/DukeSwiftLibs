@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  iosclient
+
+  Created by Antti Tohmo on 29/11/2016.
+  Copyright © 2016 10duke. All rights reserved.
+*/
+"Login" = "Login";
+"Logout" = "Logout";
+"Name" = "Name";
+"FirstName" = "First name";
+"LastName" = "Last name";
+"Email" = "Email";
+"Description" = "Description";
+"Id" = "Id";
+"MyUser" = "My user";
+"Users" = "Users";
+"Groups" = "Groups";
+"Organizations" = "Organizations";
+"Roles" = "Roles";
+"NoUserFound" = "No user found, please try again.";
+"Back" = "Back";
+"Create" = "Create";
+"Save" = "Save";
+"RoleInformation" = "Role information";
+"CreateRole" = "Create role";
+"GroupInformation" = "Group information";
+"CreateGroup" = "Create group";
+"UserInformation" = "User information";
+"CreateUser" = "Create user";
+"GroupInformation" = "Group information";
+"CreateGroup" = "Create group";
+"OrganizationInformation" = "Organization information";
+"CreateOrganization" = "Create organization";
+"Error" = "Error";
+"NotLoggedIn" = "Not logged in currently.";
+"LoggedIn" = "Logged in...";
+"LoggedInWithUser" = "Logged in with user: %@";
+"AreYouSureTitle" = "Are you sure?";
+"AreYouSureMessage" = "Delete operation cannot be undone.";
+"UserCreateFailed" = "User creation failed.";
+"UserReadFailed" = "User reading failed.";
+"UsersReadFailed" = "User listing failed.";
+"UserUpdateFailed" = "User updating failed.";
+"UserDeleteFailed" = "User deletion failed.";
+"RoleCreateFailed" = "Role creation failed.";
+"RolesReadFailed" = "Role listing failed.";
+"RoleUpdateFailed" = "Role updating failed.";
+"RoleDeleteFailed" = "Role deletion failed.";
+"OrganizationCreateFailed" = "Organization creation failed.";
+"OrganizationsReadFailed" = "Organization listing failed.";
+"OrganizationUpdateFailed" = "Organization updating failed.";
+"OrganizationDeleteFailed" = "Organization deletion failed.";
+"GroupCreateFailed" = "Group creation failed.";
+"GroupsReadFailed" = "Group listing failed.";
+"GroupUpdateFailed" = "Group updating failed.";
+"GroupDeleteFailed" = "Group deletion failed.";
+"PressOkToContinue" = "Press Ok to continue.";
+"Ok" = "Ok";
+"Yes" = "Yes";
+"Cancel" = "Cancel";
+

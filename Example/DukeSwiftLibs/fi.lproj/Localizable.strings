@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  iosclient
+
+  Created by Antti Tohmo on 29/11/2016.
+  Copyright © 2016 10duke. All rights reserved.
+*/
+"Login" = "Kirjaudu";
+"Logout" = "Kirjaudu ulos";
+"Name" = "Nimi";
+"FirstName" = "Etunimi";
+"LastName" = "Sukunimi";
+"Email" = "Sähköposti";
+"Description" = "Kuvaus";
+"Id" = "Id";
+"MyUser" = "Minun käyttäjä";
+"Users" = "Käyttäjät";
+"Groups" = "Ryhmät";
+"Organizations" = "Organisaatiot";
+"Roles" = "Roolit";
+"NoUserFound" = "Käyttäjää ei löytynyt, yritä uudelleen.";
+"Back" = "Takaisin";
+"Create" = "Luo";
+"Save" = "Tallenna";
+"RoleInformation" = "Rooli";
+"CreateRole" = "Luo rooli";
+"GroupInformation" = "Ryhmä";
+"CreateGroup" = "Luo ryhmä";
+"UserInformation" = "Käyttäjä";
+"CreateUser" = "Luo käyttäjä";
+"GroupInformation" = "Ryhmä";
+"CreateGroup" = "Luo ryhmä";
+"OrganizationInformation" = "Organisaatio";
+"CreateOrganization" = "Luo organisaatio";
+"Error" = "Virhe";
+"NotLoggedIn" = "Et ole kirjautunut sisään.";
+"LoggedIn" = "Kirjautunut sisään...";
+"LoggedInWithUser" = "Kirjautunut käyttäjänä: %@";
+"AreYouSureTitle" = "Oletko varma?";
+"AreYouSureMessage" = "Poistoa ei saa peruutettua.";
+"UserCreateFailed" = "Käyttäjän luonti epäonnistui.";
+"UserReadFailed" = "Käyttäjän haku epäonnistui.";
+"UsersReadFailed" = "Käyttäjien haku epäonnistui.";
+"UserUpdateFailed" = "Käyttäjän päivittäminen epäonnistui.";
+"UserDeleteFailed" = "Käyttäjän poistminen epäonnistui.";
+"GroupCreateFailed" = "Ryhmän luonti epäonnistui.";
+"GroupsReadFailed" = "Ryhmien haku epäonnistui.";
+"GroupUpdateFailed" = "Ryhmän päivittäminen epäonnistui.";
+"GroupDeleteFailed" = "Ryhmän poistaminen epäonnistui.";
+"OrganizationCreateFailed" = "Organisaation luonti epäonnistui.";
+"OrganizationsReadFailed" = "Organisaatioiden haku epäonnistui.";
+"OrganizationUpdateFailed" = "Organisaation päivittäminen epäonnistui.";
+"OrganizationDeleteFailed" = "Organisaation poistaminen epäonnistui.";
+"RoleCreateFailed" = "Roolin luonti epäonnistui.";
+"RolesReadFailed" = "Roolien haku epäonnistui.";
+"RoleUpdateFailed" = "Roolin päivittäminen epäonnistui.";
+"RoleDeleteFailed" = "Roolin poistaminen epäonnistui.";
+"PressOkToContinue" = "Paina Ok jatkaaksesi.";
+"Ok" = "Ok";
+"Yes" = "Kyllä";
+"Cancel" = "Peruuta";
