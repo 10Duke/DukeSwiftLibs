@@ -217,7 +217,7 @@ The following CocoaPods are used as internal dependencies in the library impleme
 * [Alamofire](https://github.com/Alamofire/Alamofire)
 * [EVReflection](https://github.com/evermeer/EVReflection/)
 * [JWTDecode](https://github.com/auth0/JWTDecode.swift)
-* [Locksmith](github.com/matthewpalmer/Locksmith)
+* [Locksmith](https://github.com/matthewpalmer/Locksmith)
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
 ## Installation
