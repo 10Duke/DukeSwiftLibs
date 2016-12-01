@@ -200,7 +200,7 @@ func deleteCallback(_ success: Bool) {
     if success {
         //
         // Disables delete action clickable button visible on screen.
-        m_updateButton?.isEnabled = false
+        m_deleteButton?.isEnabled = false
     } else {
         //
         showError(title: "User delete failed", message: "Press Ok to continue.")
