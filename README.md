@@ -75,7 +75,6 @@ let token = apiToken.getToken()
 The Oauth2 Bearer token can be used in HTTP requests i.e. towards the REST API in the authentication haeder.
  
 ```swift
-//
 let webConfiguration = WKWebViewConfiguration()
 webConfiguration.processPool = SSOImpl.shared.getProcessPool()
 //
@@ -87,12 +86,11 @@ let requestUrl = URL(string: "http://www.example.com/")
 var request = URLRequest(url: requestUrl)
 //
 if token != nil {
-//
+    //
     request.setValue("Bearer \(m_token)", forHTTPHeaderField: "Authorization")
 }
 //
 webView.load(request)
-//
 ```
 
 * The included WKWebViewController.swift class in the DukeSwiftLibs is a working example of a webview that uses the token as above.
