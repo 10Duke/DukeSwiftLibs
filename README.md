@@ -32,7 +32,7 @@ The configuration can be done once i.e. within the AppDelegate class during app 
 
 ```swift
 // Get the singleton instance of the ApiConfig
-let apiConfig: ApiConfigImpl = ApiConfigImpl.shared
+let apiConfig = ApiConfigImpl.shared
 apiConfig.setIdPBaseUrl("http://vslidp.10duke.com/")
 apiConfig.setSSOClientId("ios_test")
 apiConfig.setSSORedirectUrl("tendukeauthapp://oauth/callback")
@@ -78,6 +78,7 @@ The Oauth2 Bearer token can be used in HTTP requests i.e. towards the REST API i
 //
 let webConfiguration = WKWebViewConfiguration()
 webConfiguration.processPool = SSOImpl.shared.getProcessPool()
+//
 let webView = WKWebView(frame: .zero, configuration: webConfiguration)
 webView.navigationDelegate = self
 //
