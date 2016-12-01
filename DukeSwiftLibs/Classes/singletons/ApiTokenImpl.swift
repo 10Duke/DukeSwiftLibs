@@ -63,8 +63,6 @@ public class ApiTokenImpl: ApiToken {
      */
     public func storeToken(id: String, token: String) -> Bool {
         //
-        print("ApiTokenImpl storeToken called with id: \(id) and token: \(token)")
-        //
         do {
             //
             m_defaults.setValue(id, forKey: IDP_USERID)

@@ -91,11 +91,14 @@ class WKWebViewController: UIViewController, WKNavigationDelegate {
         let apiConfig = ApiConfigImpl.shared
         let apiToken = ApiTokenImpl.shared
         //
-        let authUrl = "\(apiConfig.getIdPBaseUrl())\(apiConfig.getSsoOauth2ApiPath())"
-        let loginUrl = "\(apiConfig.getIdPBaseUrl())login"
-        let logoutUrl = "\(apiConfig.getIdPBaseUrl())\(apiConfig.getSsoLogoutPath())"
+        let baseUrl = "\(apiConfig.getIdPBaseUrl())"
+        let authUrl = "\(baseUrl)\(apiConfig.getSsoOauth2ApiPath())"
+        let loginUrl = "\(baseUrl)login"
+        let logoutUrl = "\(baseUrl)\(apiConfig.getSsoLogoutPath())"
         //
         if let navigationUrl = navigationAction.request.url?.absoluteString {
+            //
+            print("navigationUrl: \(navigationUrl)")
             //
             // Sign out pressed...
             if navigationUrl == apiConfig.getSSORedirectUrl() {
@@ -106,7 +109,7 @@ class WKWebViewController: UIViewController, WKNavigationDelegate {
                     navController.popViewController(animated: true)
                 }
             // Continue pressed... (logout and login go through)
-            } else if !navigationUrl.hasPrefix(loginUrl) && !navigationUrl.hasPrefix(authUrl) && !navigationUrl.hasPrefix(logoutUrl) && navigationUrl.hasPrefix(apiConfig.getIdPBaseUrl()) {
+            } else if navigationUrl == baseUrl && !navigationUrl.hasPrefix(loginUrl) && !navigationUrl.hasPrefix(authUrl) && !navigationUrl.hasPrefix(logoutUrl) && navigationUrl.hasPrefix(apiConfig.getIdPBaseUrl()) {
                 //
                 if let navController = self.navigationController {
                     //

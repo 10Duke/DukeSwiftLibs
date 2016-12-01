@@ -14,7 +14,7 @@ class ClientConfig {
     /**
      * Base API URL for IdP.
      */
-    var m_apiUrl = "http://vslidp.10duke.com/"
+    var m_apiUrl = "https://vslidp.10duke.com/"
 
     /**
      * SSO Client ID.

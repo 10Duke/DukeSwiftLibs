@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32A119204AF5A76FCE1C3E86 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A11B2FB076C9D79287A568 /* WKWebViewController.swift */; };
 		35662F5C1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35662F5A1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Example.framework */; };
 		35662F5D1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35662F5B1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Tests.framework */; };
 		35FAB54D1DEF308300131BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FAB5371DEF308300131BF2 /* AppDelegate.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32A11B2FB076C9D79287A568 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		35662F5A1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DukeSwiftLibs_Example.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/DukeSwiftLibs-elepqbxfzzjaasccsxgfjefyzsoj/Build/Products/Debug-iphonesimulator/Pods_DukeSwiftLibs_Example.framework"; sourceTree = "<group>"; };
 		35662F5B1DEF451E002E2C34 /* Pods_DukeSwiftLibs_Tests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DukeSwiftLibs_Tests.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/DukeSwiftLibs-elepqbxfzzjaasccsxgfjefyzsoj/Build/Products/Debug-iphonesimulator/Pods_DukeSwiftLibs_Tests.framework"; sourceTree = "<group>"; };
 		35FAB5371DEF308300131BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				35FAB53F1DEF308300131BF2 /* OrganizationViewController.swift */,
 				35FAB5401DEF308300131BF2 /* RoleViewController.swift */,
 				35FAB5411DEF308300131BF2 /* UserViewController.swift */,
-				32A11B2FB076C9D79287A568 /* WKWebViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -481,7 +478,6 @@
 				35FAB54E1DEF308300131BF2 /* ClientConfig.swift in Sources */,
 				35FAB5511DEF308300131BF2 /* ListViewController.swift in Sources */,
 				35FAB5521DEF308300131BF2 /* MainViewController.swift in Sources */,
-				32A119204AF5A76FCE1C3E86 /* WKWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
