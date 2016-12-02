@@ -118,7 +118,7 @@ class UserViewController: AbstractViewController, UITextFieldDelegate {
             m_actionButton?.isEnabled = false
         } else {
             //
-            showError(title: "UpdateUserFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "UserUpdateFailed".localized, message: "PressOkToContinue".localized)
         }
     }
 
@@ -135,7 +135,7 @@ class UserViewController: AbstractViewController, UITextFieldDelegate {
             m_actionButton?.isEnabled = false
         } else {
             //
-            showError(title: "CreateUserFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "UserCreateFailed".localized, message: "PressOkToContinue".localized)
         }
     }
 

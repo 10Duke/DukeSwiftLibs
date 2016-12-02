@@ -53,7 +53,7 @@ class ListViewController: UITableViewController {
             m_tableView.reloadData()
         } else {
             //
-            showError(title: "GroupsReadFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "GroupsReadFailed".localized, message: "PressOkToContinue".localized, callback: errorCallback(_:))
         }
     }
 
@@ -69,7 +69,7 @@ class ListViewController: UITableViewController {
             m_tableView.reloadData()
         } else {
             //
-            showError(title: "RolesReadFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "RolesReadFailed".localized, message: "PressOkToContinue".localized, callback: errorCallback(_:))
         }
     }
 
@@ -85,7 +85,7 @@ class ListViewController: UITableViewController {
             m_tableView.reloadData()
         } else {
             //
-            showError(title: "UsersReadFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "UsersReadFailed".localized, message: "PressOkToContinue".localized, callback: errorCallback(_:))
         }
     }
 
@@ -100,7 +100,7 @@ class ListViewController: UITableViewController {
             m_tableView.reloadData()
         } else {
             //
-            showError(title: "OrganizationsReadFailed".localized, message: "PressOkToContinue".localized)
+            showError(title: "OrganizationsReadFailed".localized, message: "PressOkToContinue".localized, callback: errorCallback(_:))
         }
     }
 
@@ -452,16 +452,39 @@ class ListViewController: UITableViewController {
 
 
     /**
-     * Shows an alert error with title and message on screen with an OK button to continue.
+     * The error callback that pops the list screen away.
+     */
+    func errorCallback(_ alertAction: UIAlertAction) {
+        //
+        if let navController = self.navigationController {
+            //
+            navController.popViewController(animated: true)
+        }
+    }
+
+
+    /**
+     * Shows an alert error with title and message on screen with an Ok button to continue.
+     */
+    func showError(title: String, message: String) {
+        //
+        showError(title: title, message: message, callback: nil)
+    }
+
+
+    /**
+     * Shows an alert error with title and message on screen with an Ok button to continue.
      *
      * - parameter title: The title text of the alert.
-     * - parmater message: The message text of the alert.
+     * - parameter message: The message text of the alert.
+     * - parameter callback: The callback to be called when user presses the action button on the alert.
      */
-    public func showError(title: String, message: String) {
+    //func showError(title: String, message: String, callback: @escaping ((UIAlertAction) -> Void)!) {
+    func showError(title: String, message: String, callback: ((UIAlertAction) -> Void)!) {
         //
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         //
-        let alertAction = UIAlertAction(title: "Ok".localized, style: UIAlertActionStyle.default, handler: nil)
+        let alertAction = UIAlertAction(title: "Ok".localized, style: UIAlertActionStyle.default, handler: callback)
         //
         alert.addAction(alertAction)
         //

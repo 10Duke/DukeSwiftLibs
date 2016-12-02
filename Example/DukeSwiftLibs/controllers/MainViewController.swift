@@ -182,16 +182,18 @@ class MainViewController: AbstractViewController, WKUIDelegate {
             m_statusLabel?.textColor = UIColor.gray
             //
             if let username = myUser.firstName {
+                //
                 m_username = username
             } else {
+                //
                 m_username = nil
             }
             //
             resetButtons()
         } else {
             //
-            m_statusLabel?.text = "Login failed...".localized
             m_statusLabel?.textColor = UIColor.red
+            m_statusLabel?.text = "UserReadFailed".localized
         }
     }
 
@@ -220,6 +222,7 @@ class MainViewController: AbstractViewController, WKUIDelegate {
             self.navigationItem.leftBarButtonItem = actionButton
             //
             m_statusLabel?.text = m_username != nil ? String(format: NSLocalizedString("LoggedInWithUser", comment: ""), m_username!) : "LoggedIn".localized
+            m_statusLabel?.textColor = UIColor.gray
             m_myUserButton?.isEnabled = true
             m_myUserButton?.isHidden = false
             m_usersButton?.isEnabled = true
@@ -236,6 +239,7 @@ class MainViewController: AbstractViewController, WKUIDelegate {
             self.navigationItem.leftBarButtonItem = actionButton
             //
             m_statusLabel?.text = "NotLoggedIn".localized
+            m_statusLabel?.textColor = UIColor.gray
             m_myUserButton?.isEnabled = false
             m_myUserButton?.isHidden = true
             m_usersButton?.isEnabled = false

@@ -46,9 +46,19 @@ public class IdPApiImpl: IdPApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                callback(nil)
+                                return
+                            }
+                        }
+                        //
                         let userInfo = UserInfo(json: json.rawString())
                         callback(userInfo)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         callback(nil)
                 }

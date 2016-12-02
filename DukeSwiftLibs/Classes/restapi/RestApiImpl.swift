@@ -116,14 +116,16 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
                             print(responseString)
                         }
+                        //
                         completion(false)
                 }
             }
@@ -151,14 +153,16 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
                             print(responseString)
                         }
+                        //
                         completion(false)
                 }
             }
@@ -183,10 +187,10 @@ public class RestApiImpl: RestApi {
                 Alamofire.request(requestUrl, method: .delete, headers: getHeaders()).responseJSON { response in
                     debugPrint(response)
                     switch response.result {
-                        case .success(let _):
+                        case .success(let value):
                             //
                             completion(true)
-                        case .failure(let _):
+                        case .failure(let error):
                             //
                             completion(false)
                     }
@@ -217,9 +221,19 @@ public class RestApiImpl: RestApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                completion(nil)
+                                return
+                            }
+                        }
+                        //
                         let user = User(json: json.rawString())
                         completion(user)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         completion(nil)
                 }
@@ -245,9 +259,19 @@ public class RestApiImpl: RestApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                completion(nil)
+                                return
+                            }
+                        }
+                        //
                         users = [User](json: json.rawString())
                         completion(users)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         completion(nil)
                 }
@@ -280,15 +304,16 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .failure(let _):
+                    case .success(let value):
+                        //
+                        completion(true)
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
                             print(responseString)
                         }
-                        completion(false)
-                    case .success(let _):
                         //
-                        completion(true)
+                        completion(false)
                 }
             }
         }
@@ -315,15 +340,17 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .failure(let _):
-                        //
-                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
-                            print(responseString)
-                        }
-                        completion(false)
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
+                    case .failure(let error):
+                        //
+                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
+                            print(responseString)
+                        }
+                        //
+                        completion(false)
                 }
             }
         }
@@ -347,10 +374,10 @@ public class RestApiImpl: RestApi {
                 Alamofire.request(requestUrl, method: .delete, headers: getHeaders()).responseJSON { response in
                     debugPrint(response)
                     switch response.result {
-                        case .success(let _):
+                        case .success(let value):
                             //
                             completion(true)
-                        case .failure(let _):
+                        case .failure(let error):
                             //
                             completion(false)
                     }
@@ -377,9 +404,19 @@ public class RestApiImpl: RestApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                completion(nil)
+                                return
+                            }
+                        }
+                        //
                         groups = [Group](json: json.rawString())
                         completion(groups)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         completion(nil)
                 }
@@ -412,12 +449,13 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
                             print(responseString)
                         }
                         completion(false)
@@ -447,12 +485,13 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
                             print(responseString)
                         }
                         completion(false)
@@ -479,10 +518,10 @@ public class RestApiImpl: RestApi {
                 Alamofire.request(requestUrl, method: .delete, headers: getHeaders()).responseJSON { response in
                     debugPrint(response)
                     switch response.result {
-                        case .success(let _):
+                        case .success(let value):
                             //
                             completion(true)
-                        case .failure(let _):
+                        case .failure(let error):
                             //
                             completion(false)
                         }
@@ -509,9 +548,19 @@ public class RestApiImpl: RestApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                completion(nil)
+                                return
+                            }
+                        }
+                        //
                         roles = [Role](json: json.rawString())
                         completion(roles)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         completion(nil)
                 }
@@ -544,15 +593,17 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .failure(let _):
-                        //
-                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
-                            print(responseString)
-                        }
-                        completion(false)
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
+                    case .failure(let error):
+                        //
+                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
+                            print(responseString)
+                        }
+                        //
+                        completion(false)
                 }
             }
         }
@@ -579,14 +630,16 @@ public class RestApiImpl: RestApi {
             //
             Alamofire.request(request).responseJSON { response in
                 switch response.result {
-                    case .success(let _):
+                    case .success(let value):
                         //
                         completion(true)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            //
                             print(responseString)
                         }
+                        //
                         completion(false)
                 }
             }
@@ -611,10 +664,10 @@ public class RestApiImpl: RestApi {
                 Alamofire.request(requestUrl, method: .delete, headers: getHeaders()).responseJSON { response in
                     debugPrint(response)
                     switch response.result {
-                        case .success(let _):
+                        case .success(let value):
                             //
                             completion(true)
-                        case .failure(let _):
+                        case .failure(let error):
                             //
                             completion(false)
                     }
@@ -641,9 +694,19 @@ public class RestApiImpl: RestApi {
                     case .success(let value):
                         //
                         let json = JSON(value)
+                        //
+                        if let code = json["code"].int {
+                            //
+                            if code >= 200 || code > 300{
+                                //
+                                completion(nil)
+                                return
+                            }
+                        }
+                        //
                         organizations = [Organization](json: json.rawString())
                         completion(organizations)
-                    case .failure(let _):
+                    case .failure(let error):
                         //
                         completion(nil)
                 }

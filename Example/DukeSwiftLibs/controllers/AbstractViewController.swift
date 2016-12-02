@@ -179,7 +179,7 @@ class AbstractViewController: UIViewController {
      * Shows an alert error with title and message on screen with an OK button to continue.
      *
      * - parameter title: The title text of the alert.
-     * - parmater message: The message text of the alert.
+     * - parameter message: The message text of the alert.
      */
     func showError(title: String, message: String) {
         //
